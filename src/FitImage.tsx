@@ -86,12 +86,6 @@ class FitImage extends Component<IFitImageProps, IFitImageState> {
     this.style = StyleSheet.flatten(props.style);
 
     if (this.style) {
-      const size = [this.style.width, this.style.height];
-
-      if (size.filter(Boolean).length === 1) {
-        throw new Error('Props error: size props must be present ' +
-                        'none or both of width and height.');
-      }
 
       if (this.style.width) {
         this.sizeStyle = { width: this.style.width };
